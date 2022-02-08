@@ -1,7 +1,7 @@
 from playwright.sync_api import Playwright
 
 
-class Datapicker_page:
+class DataPickerPage:
     def __init__(self, playwright: Playwright):
         self.browser = playwright.chromium.launch(headless=False, slow_mo=1000)
         self.context = self.browser.new_context(ignore_https_errors=True)
