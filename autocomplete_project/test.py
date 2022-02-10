@@ -35,9 +35,3 @@ def test_all_colors_deleted(autocomplete_page):
     autocomplete_page.fill_color('Black')
     autocomplete_page.delete_all_colors()
     assert autocomplete_page.get_results() == []
-
-def test_single_autocomplete(single_autocom_page):
-    single_autocom_page.type_color('v')
-    assert single_autocom_page.get_options() == 'Violet'
-    single_autocom_page.click_outside()
-    assert single_autocom_page.get_options() == []

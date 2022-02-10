@@ -1,6 +1,6 @@
 from pytest import fixture
 from playwright.sync_api import sync_playwright
-from webtables_project.webtables_page_object import Webtables_page
+from webtables_project.webtables_page_object import WebTablesPage
 
 
 @fixture()
@@ -11,7 +11,7 @@ def get_playwright():
 
 @fixture()
 def web_tables_page(get_playwright):
-    app = Webtables_page(get_playwright)
+    app = WebTablesPage(get_playwright)
     yield app
     app.close()
 

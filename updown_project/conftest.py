@@ -1,6 +1,6 @@
 from pytest import fixture
 from playwright.sync_api import sync_playwright
-from updown_project.updown_page_object import Updown_page
+from updown_project.updown_page_object import UpDownPage
 
 
 @fixture()
@@ -11,6 +11,6 @@ def get_playwright():
 
 @fixture()
 def updown_page(get_playwright):
-    page = Updown_page(get_playwright)
+    page = UpDownPage(get_playwright)
     yield page
     page.close()

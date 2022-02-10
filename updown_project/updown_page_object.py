@@ -1,7 +1,7 @@
 from playwright.sync_api import Playwright
 
 
-class Updown_page:
+class UpDownPage:
     def __init__(self, playwright: Playwright):
         self.browser = playwright.chromium.launch(headless=False)
         self.context = self.browser.new_context(ignore_https_errors=True)

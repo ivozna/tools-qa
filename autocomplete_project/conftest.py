@@ -16,9 +16,5 @@ def autocomplete_page(get_playwright):
     yield page
     page.close()
 
-@fixture()
-def single_autocom_page(get_playwright):
-    page = SingleAutoComplete(get_playwright)
-    yield page
-    page.close()
+
 
